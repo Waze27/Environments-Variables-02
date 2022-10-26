@@ -11,12 +11,12 @@ public class Controller {
     @Autowired
     private Environment environment;
 
-    @GetMapping("")
+    @GetMapping("/test")
     public String getTest(){
         return environment.getProperty("welcomeMsg.test");
     }
 
-    @GetMapping("")
+    @GetMapping("/prod")
     public String getProd(){
         return environment.getProperty("welcomeMsg.prod");
     }
